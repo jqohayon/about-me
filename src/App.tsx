@@ -2,12 +2,12 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Home from './components/Home';
-import Contact from './components/career/Resources';
-import AboutMe from './components/career/Strength';
-import Experiences from './components/career/Experiences';
+import Contact from './components/career/Contact';
+import AboutMe from './components/career/AboutMe';
 import Education from './components/career/Education';
-import Skills from './components/career/Wellness';
-import Portfolio from './components/career/Supplementation';
+import Experiences from './components/career/Experiences';
+import Skills from './components/career/Skills';
+import Portfolio from './components/career/Portfolio';
 import SocialLinks from './components/SocialLinks';
 import './App.css';
 

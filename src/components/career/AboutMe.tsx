@@ -36,33 +36,37 @@ const AboutMe: React.FC = () => {
         }}>Backend SWE passionate about artificial intelligence and data-driven solutions.</p>
       </div>
       <div className="content-section">
-        <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto' }}>
-          <div className="timeline-card-header" style={{ marginBottom: 12 }}>
-            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>About Me</h4>
-          </div>
-          <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.1rem', margin: 0 }}>
-            Based in Tampa, FL. Backend SWE passionate about AI and data. Enjoys hiking, fitness, and learning new tech. Loves building scalable systems and solving problems. Always exploring new data tools and frameworks.
+        {/* Professional Summary */}
+        <div className="timeline-card" style={{ maxWidth: 600, margin: '0 auto 24px auto', textAlign: 'center' }}>
+          <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.15rem', margin: 0 }}>
+            Backend Software Engineer based in Tampa, FL, passionate about AI, data, and building scalable solutions that make a difference. I thrive on exploring new technologies, mentoring others, and bringing a positive, collaborative spirit to every project.
           </p>
         </div>
-
-        <div className="timeline-card" style={{ maxWidth: 500, margin: '32px auto 0 auto' }}>
-          <div className="timeline-card-header" style={{ marginBottom: 12 }}>
-            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>Personality Style</h4>
+        {/* Personality Style */}
+        <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto 24px auto', textAlign: 'center' }}>
+          <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Personality Style</h4>
           </div>
-          <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.1rem', margin: 0 }}>
-            INTJ (Architect) – Strategic, analytical, and independent. I thrive on solving complex problems and building innovative solutions.
-          </p>
-        </div>
-
-        <div className="timeline-card" style={{ maxWidth: 500, margin: '32px auto 0 auto' }}>
-          <div className="timeline-card-header" style={{ marginBottom: 12 }}>
-            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>Work Style</h4>
+          <div style={{ color: '#00bfff', fontWeight: 600, fontSize: '1.1rem' }}>
+            INTJ / Architect
           </div>
-          <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.1rem', margin: 0 }}>
-            Collaborative yet self-driven, I value clear communication, deep focus, and continuous learning. I enjoy architecting scalable systems and mentoring others in tech.
-          </p>
+          <div style={{ color: '#bdbdbd', fontSize: '1rem', marginTop: 6 }}>
+            Strategic, analytical, and future-focused. I enjoy solving complex problems and creating efficient systems.
+          </div>
         </div>
-
+        {/* Work Style */}
+        <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto 24px auto', textAlign: 'center' }}>
+          <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Work Style</h4>
+          </div>
+          <div style={{ color: '#00bfff', fontWeight: 600, fontSize: '1.1rem' }}>
+            Collaborative, detail-oriented, and growth-minded
+          </div>
+          <div style={{ color: '#bdbdbd', fontSize: '1rem', marginTop: 6 }}>
+            I value clear communication, continuous learning, and delivering high-quality results in every project.
+          </div>
+        </div>
+        {/* Beyond the Code - moved to bottom */}
         <div className="timeline-card" style={{ maxWidth: 500, margin: '32px auto 0 auto' }}>
           <div className="timeline-card-header" style={{ marginBottom: 12, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Beyond the Code</h4>

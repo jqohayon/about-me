@@ -2,7 +2,7 @@ import React from 'react';
 import '../GoogleDocViewer.css';
 import { FaEnvelope } from 'react-icons/fa';
 
-const Resources: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <div className="doc-container">
       <h2 style={{
@@ -51,4 +51,4 @@ const Resources: React.FC = () => {
   );
 }
 
-export default Resources; 
+export default Contact; 
