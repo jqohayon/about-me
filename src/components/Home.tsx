@@ -6,10 +6,15 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="home">
-        <h1>Welcome</h1>
+        <h1 style={{
+          background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          fontWeight: 700
+        }}>Welcome</h1>
         <img src={astronautImage} alt="Astronaut" className="astronaut-image" />
-        <p>
-          Welcome to your fitness journey! Here you'll find comprehensive guides for strength training, cardiovascular health, and nutrition. Let's work together to achieve your fitness goals.
+        <p className="welcome-message">
+          Welcome! I'm a backend software engineer passionate about AI, data, and building scalable solutions that make a difference. I love exploring new technologies, mentoring others, and bringing a positive, collaborative spirit to every project. Thanks for stopping by—let's connect and create something impactful together!
         </p>
       </div>
     </>

@@ -1,13 +1,18 @@
 import React from 'react';
 import '../GoogleDocViewer.css';
-import { GiMedicines } from 'react-icons/gi';
+import { FaFolderOpen } from 'react-icons/fa';
 
-const Supplementation: React.FC = () => {
+const Portfolio: React.FC = () => {
   return (
     <div className="doc-container">
-      <h2>Supplementation</h2>
+      <h2 style={{
+        background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        fontWeight: 700
+      }}>Portfolio</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <GiMedicines 
+        <FaFolderOpen 
           style={{ 
             fontSize: '2rem',
             color: '#6a1b9a',
@@ -20,37 +25,20 @@ const Supplementation: React.FC = () => {
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
-        }}>Support your goals with proper supplementation.</p>
+        }}>A showcase of my projects and technical work.</p>
       </div>
       <div className="content-section">
-        <div className="emphasis-box">
-          <h4 style={{ fontSize: '1.3rem' }}>Supplement Guide</h4>
-          <ul>
-            <li><strong>Essential Supplements:</strong> Core supplements for fitness goals.</li>
-            <li><strong>Timing Strategy:</strong> Optimal timing for maximum benefits.</li>
-            <li><strong>Safety Guidelines:</strong> Proper dosage and quality sourcing.</li>
-            <li><strong>Goal Specific:</strong> Supplements for your specific needs.</li>
-          </ul>
-        </div>
-
-        <section className="tools-section">
-          <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem' }}>Key Supplements</h4>
-            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <span>Protein</span>
-              <span>Creatine</span>
-              <span>BCAAs</span>
-              <span>Pre-Workout</span>
-              <span>Vitamins</span>
-              <span>Fish Oil</span>
-              <span>Minerals</span>
-              <span>Electrolytes</span>
-            </div>
+        <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto' }}>
+          <div className="timeline-card-header" style={{ marginBottom: 12, textAlign: 'center' }}>
+            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Coming Soon</h4>
           </div>
-        </section>
+          <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.1rem', margin: 0, textAlign: 'center' }}>
+            My portfolio projects will be displayed here soon!
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Supplementation; 
+export default Portfolio; 

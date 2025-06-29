@@ -1,13 +1,53 @@
 import React from 'react';
 import '../GoogleDocViewer.css';
-import { FaSpa } from 'react-icons/fa';
+import { FaTools } from 'react-icons/fa';
 
-const Wellness: React.FC = () => {
+const skillCategories = [
+  {
+    title: 'Programming Languages',
+    skills: ['TypeScript', 'JavaScript', 'SAS']
+  },
+  {
+    title: 'Frameworks',
+    skills: ['NestJS', 'BullMQ']
+  },
+  {
+    title: 'Cloud Platforms',
+    skills: ['Amazon AWS', 'Google Cloud']
+  },
+  {
+    title: 'Databases',
+    skills: ['MySQL', 'Postgres', 'Redis', 'SQL']
+  },
+  {
+    title: 'Data Science & ML',
+    skills: ['TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas']
+  },
+  {
+    title: 'Big Data Tools',
+    skills: ['Spark', 'Kafka', 'Airflow', 'dbt']
+  },
+  {
+    title: 'DevOps & Tools',
+    skills: ['Docker', 'Kubernetes', 'Swagger', 'GitHub', 'GitHub Actions', 'Postman', 'Datadog', 'Lucidchart']
+  },
+  {
+    title: 'Visualization',
+    skills: ['Tableau']
+  }
+];
+
+const Skills: React.FC = () => {
   return (
     <div className="doc-container">
-      <h2>Wellness</h2>
+      <h2 style={{
+        background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        fontWeight: 700
+      }}>Skills</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <FaSpa 
+        <FaTools 
           style={{ 
             fontSize: '2rem',
             color: '#6a1b9a',
@@ -20,37 +60,59 @@ const Wellness: React.FC = () => {
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
-        }}>Mind, body, and spirit in harmony.</p>
+        }}>A blend of technical, analytical, and personal growth skills.</p>
       </div>
       <div className="content-section">
-        <div className="emphasis-box">
-          <h4 style={{ fontSize: '1.3rem' }}>Holistic Benefits</h4>
-          <ul>
-            <li><strong>Mental Clarity:</strong> Practice mindfulness and meditation for improved focus and reduced stress.</li>
-            <li><strong>Recovery:</strong> Learn proper rest and recovery techniques for optimal performance.</li>
-            <li><strong>Sleep Quality:</strong> Develop healthy sleep habits for better recovery and energy levels.</li>
-            <li><strong>Stress Management:</strong> Implement strategies to balance fitness goals with overall wellbeing.</li>
-          </ul>
-        </div>
-
-        <section className="tools-section">
-          <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem' }}>Focus Areas</h4>
-            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <span>Meditation</span>
-              <span>Ice Bath</span>
-              <span>Breathing</span>
-              <span>Yoga</span>
-              <span>Recovery</span>
-              <span>Sleep</span>
-              <span>Massage</span>
-              <span>Balance</span>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
+          {skillCategories.map((cat, idx) => (
+            <div
+              className={`timeline-card${idx === 0 ? ' gradient-animated-border' : ''}`}
+              style={{ minWidth: 320, maxWidth: 520, margin: '0 8px', padding: '24px 16px' }}
+              key={cat.title}
+            >
+              <div className="timeline-card-header" style={{ marginBottom: 18 }}>
+                <div className="timeline-job-title" style={{
+                  fontWeight: 700,
+                  fontSize: '1.25rem',
+                  letterSpacing: '0.5px',
+                  color: '#fff',
+                  textAlign: 'center',
+                  width: '100%',
+                  margin: '0 auto',
+                  display: 'block'
+                }}>{cat.title}</div>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0, flexWrap: 'wrap' }}>
+                {cat.skills.map((skill, idx) => (
+                  <React.Fragment key={skill}>
+                    <span style={{
+                      color: '#00bfff',
+                      fontSize: '1.35rem',
+                      fontWeight: 600,
+                      fontFamily: 'Quicksand, Poppins, sans-serif',
+                      padding: '0 18px',
+                      borderRadius: '8px',
+                      letterSpacing: '0.5px',
+                      lineHeight: 1.2
+                    }}>{skill}</span>
+                    {idx !== cat.skills.length - 1 && (
+                      <div style={{
+                        width: '3px',
+                        height: '28px',
+                        background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+                        borderRadius: '2px',
+                        margin: '0 2px'
+                      }} />
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Wellness; 
+export default Skills; 
