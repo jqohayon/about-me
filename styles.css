@@ -1,0 +1,139 @@
+body {
+  background-color: #9d6be7;  /* Light purple background */
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(230, 213, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 40%, rgba(230, 213, 255, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 40% 60%, rgba(230, 213, 255, 0.4) 0%, transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(230, 213, 255, 0.3) 0%, transparent 35%);
+  background-size: 100% 100%;
+  min-height: 100vh;
+  font-family: 'Indie Flower', cursive;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 700;  /* Make all text bold */
+}
+
+h1 {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 900;  /* Maximum boldness */
+  font-size: 2.5em;  /* Larger size for main header */
+  border-bottom: 2px solid #6a1b9a;  /* Dark purple horizontal line */
+  padding-bottom: 5px;  /* Space between text and line */
+  margin-bottom: 15px;  /* Space after the line */
+  color: #000;  /* Darker color for more contrast */
+}
+
+h2 {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 900;  /* Maximum boldness */
+  font-size: 1.8em;  /* Larger size for subheaders */
+  border-bottom: 2px solid #6a1b9a;  /* Dark purple horizontal line */
+  padding-bottom: 5px;  /* Space between text and line */
+  margin-bottom: 15px;  /* Space after the line */
+  color: #000;  /* Darker color for more contrast */
+}
+
+p {
+  font-size: 1.2em;  /* Larger text for paragraphs */
+  margin-bottom: 1em;  /* Add some space between paragraphs */
+}
+
+blockquote {
+  font-size: 1.2em;  /* Match paragraph size */
+  margin: 1.5em 0;  /* Add space above and below quotes */
+}
+
+img {
+  border-radius: 15px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: transform 0.3s ease;  /* Smooth transform animation */
+}
+
+img:hover {
+  transform: scale(1.02);  /* Slightly enlarge on hover */
+}
+
+.button {
+  background-color: #e6d5ff;  /* Light purple background */
+  border: 3px solid #6a1b9a;  /* Darker purple border */
+  padding: 8px 25px;  /* Increased padding for cloud shape */
+  font-family: 'Indie Flower', cursive;  /* Match page font */
+  font-weight: 700;  /* Bold text */
+  font-size: 0.9em;  /* Slightly smaller text */
+  cursor: pointer;  /* Hand cursor on hover */
+  text-decoration: none;  /* Remove underline from link */
+  color: #333;  /* Keep text color consistent */
+  display: inline-block;  /* Allow padding and transform */
+  /* Cloud shape using varied border radius */
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.button:hover {
+  background-color: #d4b3ff;  /* Slightly darker purple on hover */
+  transform: scale(1.05);  /* Slightly enlarge on hover */
+}
+
+/* Cloud Decorations */
+.cloud {
+  position: fixed;
+  width: 100px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  left: 15px;
+}
+
+.cloud::after {
+  width: 40px;
+  height: 40px;
+  top: -15px;
+  left: 45px;
+}
+
+.cloud-1 {
+  top: 20%;
+  left: -100px;
+  animation: float-right 30s linear infinite;
+}
+
+.cloud-2 {
+  top: 45%;
+  left: -150px;
+  animation: float-right 45s linear infinite;
+  transform: scale(1.5);
+}
+
+.cloud-3 {
+  top: 70%;
+  left: -80px;
+  animation: float-right 35s linear infinite;
+  transform: scale(0.8);
+}
+
+@keyframes float-right {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+} 

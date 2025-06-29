@@ -1,0 +1,130 @@
+/* Background color: rgba(20, 17, 35, 0.95)
+   This is a very dark blue-black color with 95% opacity
+   Used in:
+   - Navigation container
+   - Dropdown menus
+   - Main background elements
+*/
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 15px;
+  margin: 0 auto 20px;
+  width: 98%;
+  min-height: 80px;
+  background: rgba(20, 17, 35, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6a1b9a;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  padding: 5px 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #9d6be7;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  transform: translateY(-1px);
+}
+
+.career-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.career-dropdown .nav-link {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  padding: 8px 0;
+  z-index: 1000;
+  background: rgba(20, 17, 35, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-link {
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.dropdown-link:hover {
+  background-color: rgba(147, 112, 219, 0.2);
+}
+
+.dropdown-link.active {
+  background-color: rgba(147, 112, 219, 0.3);
+  color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navigation {
+    padding: 10px;
+    gap: 20px;
+    min-height: 120px;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+  
+  .nav-link.active {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    padding: 8px;
+    gap: 15px;
+    min-height: 140px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+  
+  /* Hide text for some links on very small screens, keep only icons */
+  .nav-link.icon-only-mobile span {
+    display: none;
+  }
+} 

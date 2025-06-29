@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+  background: 
+    radial-gradient(1px 1px at 25% 5%, rgba(255, 255, 255, 0.85) 50%, transparent 50%),
+    radial-gradient(1px 1px at 50% 12%, rgba(255, 255, 255, 0.9) 50%, transparent 50%),
+    radial-gradient(2px 2px at 15% 15%, rgba(255, 255, 255, 0.7) 50%, transparent 50%),
+    radial-gradient(1px 1px at 35% 25%, rgba(255, 255, 255, 0.8) 50%, transparent 50%),
+    radial-gradient(2px 2px at 65% 30%, rgba(255, 255, 255, 0.75) 50%, transparent 50%),
+    radial-gradient(1px 1px at 85% 35%, rgba(255, 255, 255, 0.9) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 10% 40%, rgba(255, 255, 255, 0.8) 50%, transparent 50%),
+    radial-gradient(1px 1px at 45% 45%, rgba(255, 255, 255, 0.7) 50%, transparent 50%),
+    radial-gradient(2px 2px at 75% 55%, rgba(255, 255, 255, 0.85) 50%, transparent 50%),
+    radial-gradient(1px 1px at 20% 60%, rgba(255, 255, 255, 0.9) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 40% 65%, rgba(255, 255, 255, 0.8) 50%, transparent 50%),
+    radial-gradient(1px 1px at 60% 75%, rgba(255, 255, 255, 0.75) 50%, transparent 50%),
+    radial-gradient(2px 2px at 95% 80%, rgba(255, 255, 255, 0.9) 50%, transparent 50%),
+    radial-gradient(1px 1px at 30% 85%, rgba(255, 255, 255, 0.8) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 55% 90%, rgba(255, 255, 255, 0.85) 50%, transparent 50%),
+    radial-gradient(1px 1px at 80% 95%, rgba(255, 255, 255, 0.7) 50%, transparent 50%),
+    linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(5, 5, 5, 0.95) 50%,
+      rgba(0, 0, 0, 0.95) 100%
+    ),
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    radial-gradient(circle at 50% 50%, 
+      rgba(255, 255, 255, 0.05) 0%, 
+      transparent 60%
+    );
+  background-size: 
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    200px 200px,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-blend-mode: normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, overlay, screen;
+  min-height: 100vh;
+  font-family: 'Indie Flower', cursive;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  padding: 20px;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  background-color: rgba(147, 112, 219, 0.25);
+  border-radius: 35px;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 35px;
+  background: linear-gradient(
+    45deg,
+    #6a1b9a,
+    #9d6be7,
+    #d4b3ff,
+    #9d6be7,
+    #6a1b9a
+  );
+  z-index: -1;
+  filter: blur(15px);
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  from {
+    filter: blur(15px);
+    transform: scale(1);
+  }
+  to {
+    filter: blur(20px);
+    transform: scale(1.02);
+  }
+}
+
+h1, h2 {
+  font-weight: 900;
+  border-bottom: 2px solid #6a1b9a;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.8em; }
+
+p { font-size: 1.2em; }
+
+img {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+blockquote {
+  background-color: rgba(230, 213, 255, 0.3);
+  border-left: 4px solid #6a1b9a;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+mark {
+  background-color: #d4b3ff;
+  padding: 0 5px;
+  border-radius: 4px;
+}
