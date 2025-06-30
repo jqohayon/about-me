@@ -3,26 +3,31 @@
   width: auto;
   margin: 0 1cm;
   top: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 80vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(5, 5, 5, 0.95) 50%, rgba(0, 0, 0, 0.95) 100%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 12px),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  background-blend-mode: normal, overlay, screen;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem 2rem 2rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 0;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.95);
-  border-radius: 12px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .home h1 {
@@ -36,6 +41,38 @@
 .typing-animation {
   margin-bottom: 2rem;
   padding: 0.5rem 0;
+}
+
+.profile-photo-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 2.5rem auto 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28);
+  border: 3px solid #9d6be7;
+  display: block;
+}
+
+.profile-photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(157, 107, 231, 0.22); /* lighter translucent purple */
+  pointer-events: none;
+  z-index: 2;
 }
 
 .astronaut-image {
