@@ -2,54 +2,54 @@
   "hash": "a082b9d8",
   "configHash": "c2c3bf4d",
   "lockfileHash": "2ecac705",
-  "browserHash": "1c859f10",
+  "browserHash": "a62eaa06",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "9d4088fe",
+      "fileHash": "6043eae3",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "007905e0",
+      "fileHash": "5041d4d2",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "d34a7814",
+      "fileHash": "673dafcb",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "71a7a71b",
-      "needsInterop": false
-    },
-    "react-type-animation": {
-      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
-      "file": "react-type-animation.js",
-      "fileHash": "4af3e48a",
-      "needsInterop": false
-    },
-    "react-icons/fa": {
-      "src": "../../node_modules/react-icons/fa/index.mjs",
-      "file": "react-icons_fa.js",
-      "fileHash": "5e79a5c3",
+      "fileHash": "274db5b6",
       "needsInterop": false
     },
     "@fortawesome/react-fontawesome": {
       "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
       "file": "@fortawesome_react-fontawesome.js",
-      "fileHash": "1e224fa7",
+      "fileHash": "7b1d2b6b",
       "needsInterop": false
     },
     "@fortawesome/free-brands-svg-icons": {
       "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
       "file": "@fortawesome_free-brands-svg-icons.js",
-      "fileHash": "0bdeb059",
+      "fileHash": "4e97e68b",
+      "needsInterop": false
+    },
+    "react-type-animation": {
+      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
+      "file": "react-type-animation.js",
+      "fileHash": "b6d16970",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "f0957823",
       "needsInterop": false
     }
   },
