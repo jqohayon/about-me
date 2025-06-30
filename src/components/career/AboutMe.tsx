@@ -33,37 +33,77 @@ const AboutMe: React.FC = () => {
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
-        }}>Backend SWE passionate about artificial intelligence and data-driven solutions.</p>
+        }}>Problem solver and lifelong learner.</p>
       </div>
       <div className="content-section">
-        {/* Professional Summary */}
         <div className="timeline-card" style={{ maxWidth: 600, margin: '0 auto 24px auto', textAlign: 'center' }}>
-          <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.15rem', margin: 0 }}>
-            Backend Software Engineer based in Tampa, FL, passionate about AI, data, and building scalable solutions that make a difference. I thrive on exploring new technologies, mentoring others, and bringing a positive, collaborative spirit to every project.
+          <p style={{
+            color: '#9d6be7',
+            fontSize: '1rem',
+            margin: '0 0 1.5rem 0',
+            maxWidth: 700,
+            textAlign: 'center',
+            lineHeight: 1.6
+          }}>
+            Welcome! I'm a software engineer with a background heavily laden in data. I am after the story it has to tell us. I am passionate about diving into new AI tools and technologies, mentoring others, and bringing a positive, collaborative spirit to every project. Thanks for stopping by—let's connect and create something impactful together!
           </p>
         </div>
-        {/* Personality Style */}
+        {/* Personality Type */}
         <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto 24px auto', textAlign: 'center' }}>
           <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Personality Style</h4>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Personality Type</h4>
           </div>
           <div style={{ color: '#00bfff', fontWeight: 600, fontSize: '1.1rem' }}>
             INTJ / Architect
           </div>
+          <a
+            href="https://www.16personalities.com/profiles/d94eddeacab13"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: '#9d6be7',
+              fontWeight: 500,
+              fontSize: '0.98rem',
+              textDecoration: 'underline',
+              marginTop: 4,
+              display: 'inline-block',
+              transition: 'color 0.2s',
+            }}
+            className="personality-link"
+          >
+            View INTJ-A Profile (16Personalities)
+          </a>
           <div style={{ color: '#bdbdbd', fontSize: '1rem', marginTop: 6 }}>
-            Strategic, analytical, and future-focused. I enjoy solving complex problems and creating efficient systems.
+            Strategic, analytical, and future-focused. I enjoy solving complex problems and creating efficient systems. This personality type excels in software engineering and data analysis, while also being highly effective in collaborative team environments.
           </div>
         </div>
-        {/* Work Style */}
+        {/* Work Personality */}
         <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto 24px auto', textAlign: 'center' }}>
           <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Work Style</h4>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Work Personality</h4>
           </div>
           <div style={{ color: '#00bfff', fontWeight: 600, fontSize: '1.1rem' }}>
             Collaborative, detail-oriented, and growth-minded
           </div>
+          <a
+            href="https://www.16personalities.com/specialized-tests/results/job-preferences"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: '#9d6be7',
+              fontWeight: 500,
+              fontSize: '0.98rem',
+              textDecoration: 'underline',
+              marginTop: 4,
+              display: 'inline-block',
+              transition: 'color 0.2s',
+            }}
+            className="work-preferences-link"
+          >
+            View Job Preferences Profile
+          </a>
           <div style={{ color: '#bdbdbd', fontSize: '1rem', marginTop: 6 }}>
-            I value clear communication, continuous learning, and delivering high-quality results in every project.
+            I value clear communication, continuous learning, and delivering high-quality results in every project. My work preferences align with roles that offer intellectual challenges, autonomy, and opportunities to innovate while contributing to meaningful outcomes.
           </div>
         </div>
         {/* Beyond the Code - moved to bottom */}
@@ -71,15 +111,24 @@ const AboutMe: React.FC = () => {
           <div className="timeline-card-header" style={{ marginBottom: 12, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Beyond the Code</h4>
           </div>
-          <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', width: '100%' }}>
-            <span>Squats</span>
-            <span>Deadlifts</span>
-            <span>Bench Press</span>
-            <span>Rows</span>
-            <span>Pull-ups</span>
-            <span>Overhead Press</span>
-            <span>Hip Thrust</span>
-            <span>Core Work</span>
+          <div className="beyond-code-piped-multiline" style={{ fontSize: '1.1em', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', width: '100%' }}>
+            <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+              <span className="beyond-code-item">Motorcycling</span>
+              <span className="beyond-code-pipe" />
+              <span className="beyond-code-item">Hiking</span>
+            </div>
+            <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+              <span className="beyond-code-item">Sci-Fi Bookworm</span>
+              <span className="beyond-code-pipe" />
+              <span className="beyond-code-item">Weightlifter</span>
+              <span className="beyond-code-pipe" />
+              <span className="beyond-code-item">Kiteboarding</span>
+            </div>
+            <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+              <span className="beyond-code-item">Violist</span>
+              <span className="beyond-code-pipe" />
+              <span className="beyond-code-item">Boardgames</span>
+            </div>
           </div>
         </div>
       </div>

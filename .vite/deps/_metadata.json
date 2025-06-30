@@ -2,54 +2,54 @@
   "hash": "a082b9d8",
   "configHash": "c2c3bf4d",
   "lockfileHash": "2ecac705",
-  "browserHash": "db412413",
+  "browserHash": "1c859f10",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "e54059bf",
+      "fileHash": "9d4088fe",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "ff87a723",
+      "fileHash": "007905e0",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "afe2bae3",
+      "fileHash": "d34a7814",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "082e1166",
-      "needsInterop": false
-    },
-    "react-icons/fa": {
-      "src": "../../node_modules/react-icons/fa/index.mjs",
-      "file": "react-icons_fa.js",
-      "fileHash": "fd6be1e7",
-      "needsInterop": false
-    },
-    "@fortawesome/react-fontawesome": {
-      "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
-      "file": "@fortawesome_react-fontawesome.js",
-      "fileHash": "98626c3f",
-      "needsInterop": false
-    },
-    "@fortawesome/free-brands-svg-icons": {
-      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
-      "file": "@fortawesome_free-brands-svg-icons.js",
-      "fileHash": "2632c5fd",
+      "fileHash": "71a7a71b",
       "needsInterop": false
     },
     "react-type-animation": {
       "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
       "file": "react-type-animation.js",
-      "fileHash": "5332e845",
+      "fileHash": "4af3e48a",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "5e79a5c3",
+      "needsInterop": false
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "1e224fa7",
+      "needsInterop": false
+    },
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "0bdeb059",
       "needsInterop": false
     }
   },
