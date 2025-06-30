@@ -554,7 +554,7 @@ a[href="/feedback"],
   left: 30px; /* Center of the 60px icon column */
   top: 36px; /* Start after the first icon */
   width: 4px;
-  height: calc(100% - 36px);
+  height: calc(85% - 36px);
   background: linear-gradient(180deg, #00bfff 0%, #6a1b9a 100%);
   z-index: 1;
 }
@@ -592,9 +592,9 @@ a[href="/feedback"],
 }
 
 /* Remove the individual vertical line since we're using a continuous one */
-.timeline-vertical-line {
+/* .timeline-vertical-line {
   display: none;
-}
+} */
 
 .timeline-card {
   background: #181828;

@@ -9,7 +9,7 @@ const skillCategories = [
   },
   {
     title: 'Frameworks',
-    skills: ['NestJS', 'BullMQ']
+    skills: ['NestJS', 'BullMQ', 'React', 'npm', 'Node.js', 'Jest']
   },
   {
     title: 'Cloud Platforms',
@@ -17,23 +17,27 @@ const skillCategories = [
   },
   {
     title: 'Databases',
-    skills: ['MySQL', 'Postgres', 'Redis', 'SQL']
+    skills: ['MySQL', 'Postgres', 'SQL']
   },
   {
-    title: 'Data Science & ML',
-    skills: ['TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas']
-  },
-  {
-    title: 'Big Data Tools',
-    skills: ['Spark', 'Kafka', 'Airflow', 'dbt']
+    title: 'Data Science',
+    skills: ['Qualtrics', 'REDCap', 'IBM SPSS', 'R Studio', 'Stata']
   },
   {
     title: 'DevOps & Tools',
-    skills: ['Docker', 'Kubernetes', 'Swagger', 'GitHub', 'GitHub Actions', 'Postman', 'Datadog', 'Lucidchart']
+    skills: ['Docker', 'Kubernetes', 'Swagger', 'GitHub', 'GitHub Actions', 'Postman', 'Datadog', 'Lucidchart', 'Redis']
   },
   {
-    title: 'Visualization',
-    skills: ['Tableau']
+    title: 'Development Tools',
+    skills: ['Jira', 'Confluence', 'Slack', 'VS Code', 'Cursor', 'WindSurf', 'Excel', 'PowerPoint', 'Salesforce', 'ERP Systems']
+  },
+  {
+    title: 'Methodologies',
+    skills: ['Agile Environment', 'Domain Driven Design', 'Test Driven Development']
+  },
+  {
+    title: 'AI',
+    skills: ['ChatGPT', 'GitHub Copilot', 'Lovable']
   }
 ];
 
@@ -67,10 +71,19 @@ const Skills: React.FC = () => {
           {skillCategories.map((cat, idx) => (
             <div
               className={`timeline-card${idx === 0 ? ' gradient-animated-border' : ''}`}
-              style={{ minWidth: 320, maxWidth: 520, margin: '0 8px', padding: '24px 16px' }}
+              style={{ 
+                flex: '1 1 auto',
+                minWidth: '280px',
+                maxWidth: 'fit-content',
+                margin: '0 8px', 
+                padding: '20px 16px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
               key={cat.title}
             >
-              <div className="timeline-card-header" style={{ marginBottom: 18 }}>
+              <div className="timeline-card-header" style={{ marginBottom: 16, width: '100%' }}>
                 <div className="timeline-job-title" style={{
                   fontWeight: 700,
                   fontSize: '1.25rem',
@@ -82,7 +95,14 @@ const Skills: React.FC = () => {
                   display: 'block'
                 }}>{cat.title}</div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0, flexWrap: 'wrap' }}>
+              <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                gap: 0, 
+                flexWrap: 'wrap',
+                width: '100%'
+              }}>
                 {cat.skills.map((skill, idx) => (
                   <React.Fragment key={skill}>
                     <span style={{

@@ -1,6 +1,29 @@
 import React from 'react';
 import '../GoogleDocViewer.css';
-import { FaAppleAlt } from 'react-icons/fa';
+import { FaAppleAlt, FaGraduationCap } from 'react-icons/fa';
+
+const education = [
+  {
+    degree: 'Master of Science',
+    gpa: '4.0',
+    date: '2022',
+    details: [
+      'Statistical Analysis',
+      'Published Thesis',
+      'Scientific Writing',
+    ],
+  },
+  {
+    degree: 'Bachelor of Science',
+    gpa: '3.9',
+    date: '2020',
+    details: [
+      'Volunteer Project',
+      'Capstone Thesis',
+      'Honor Society',
+    ],
+  },
+];
 
 const Education: React.FC = () => {
   return (
@@ -25,33 +48,63 @@ const Education: React.FC = () => {
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
-        }}>Empower your mind and career with continuous learning.</p>
+        }}>Commitment to curiosity & continued learning</p>
       </div>
-      <div className="content-section">
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <div className="timeline-card">
-            <div className="timeline-card-header">
-              <div>
-                <div className="timeline-job-title">Master of Science</div>
-                <div className="timeline-company">GPA: 4.0</div>
+      <div className="timeline-container">
+        <div className="header-divider" style={{ margin: '0 auto 30px auto' }} />
+        <div className="timeline">
+          {education.map((edu, idx) => (
+            <div className="timeline-row" key={idx}>
+              <div className="timeline-icon-col">
+                <div className="timeline-icon-wrapper">
+                  <FaGraduationCap className="timeline-icon" />
+                  {idx !== education.length - 1 && <div className="timeline-vertical-line" />}
+                </div>
               </div>
-              <div className="timeline-date">2022</div>
-            </div>
-          </div>
-          <div className="timeline-card">
-            <div className="timeline-card-header">
-              <div>
-                <div className="timeline-job-title">Bachelor of Science</div>
-                <div className="timeline-company">GPA: 3.9</div>
+              <div className="timeline-card gradient-animated-border">
+                <div className="timeline-card-header">
+                  <div>
+                    <div className="timeline-job-title" style={{ color: '#fff' }}>{edu.degree}</div>
+                    <div className="timeline-company" style={{ color: '#00bfff' }}>GPA: {edu.gpa}</div>
+                  </div>
+                  <div className="timeline-date" style={{ color: '#9370DB' }}>{edu.date}</div>
+                </div>
+                <div className="timeline-details-row" style={{ color: '#00bfff' }}>
+                  {edu.details.map((detail, i) => (
+                    <React.Fragment key={i}>
+                      <span>{detail}</span>
+                      {i !== edu.details.length - 1 && <span className="gradient-pipe" />}
+                    </React.Fragment>
+                  ))}
+                </div>
+                {edu.degree === 'Bachelor of Science' && (
+                  <div style={{ color: '#b6aee7', fontSize: '1.01rem', marginTop: 10, textAlign: 'center', fontStyle: 'italic', maxWidth: 600, marginLeft: 'auto', marginRight: 'auto' }}>
+                    Awarded Student of the year for fostering a supportive academic community, creating study guides and leading regular group sessions to help fellow students succeed.
+                  </div>
+                )}
+                {edu.degree === 'Master of Science' && (
+                  <div style={{ color: '#b6aee7', fontSize: '1.01rem', marginTop: 10, textAlign: 'center', fontStyle: 'italic', maxWidth: 600, marginLeft: 'auto', marginRight: 'auto' }}>
+                    Analyzed complex data, synthesized research, wrote published articles, and volunteered for multiple projects that helped community members of all populations
+                  </div>
+                )}
               </div>
-              <div className="timeline-date">2020</div>
             </div>
-          </div>
+          ))}
         </div>
+      </div>
 
-        <div className="timeline-card" style={{ marginTop: '32px' }}>
+      <div className="timeline-row">
+        <div className="timeline-icon-col" />
+        <div style={{ marginTop: '32px', width: '100%' }}>
           <div style={{ marginBottom: '1.2rem', textAlign: 'center' }}>
-            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>Professional Development</h4>
+            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>Courses & Certificates</h4>
+            <div style={{
+              width: '120px',
+              height: '3px',
+              margin: '10px auto 0 auto',
+              borderRadius: '4px',
+              background: 'linear-gradient(90deg, #00bfff 0%, #9370DB 100%)',
+            }} />
           </div>
           <div className="skill-tags-container" style={{ justifyContent: 'center' }}>
             <span className="skill-tag">NestJS</span>
