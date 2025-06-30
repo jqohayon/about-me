@@ -293,17 +293,6 @@ blockquote {
   margin-bottom: 30px;
 }
 
-.header-divider {
-  width: 80%;
-  border: none;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0) 0%, 
-    rgba(147, 112, 219, 0.6) 50%, 
-    rgba(255, 255, 255, 0) 100%);
-  margin: 15px auto 20px;
-}
-
 .subtitle-container {
   display: flex;
   align-items: center;
@@ -556,7 +545,18 @@ a[href="/feedback"],
 
 .timeline {
   position: relative;
-  margin-left: 40px;
+  margin-left: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px; /* Center of the 60px icon column */
+  top: 36px; /* Start after the first icon */
+  width: 4px;
+  height: calc(100% - 36px);
+  background: linear-gradient(180deg, #00bfff 0%, #6a1b9a 100%);
+  z-index: 1;
 }
 
 .timeline-row {
@@ -591,15 +591,9 @@ a[href="/feedback"],
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* Remove the individual vertical line since we're using a continuous one */
 .timeline-vertical-line {
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #00bfff 0%, #6a1b9a 100%);
-  position: absolute;
-  top: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  display: none;
 }
 
 .timeline-card {

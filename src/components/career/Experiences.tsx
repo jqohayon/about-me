@@ -15,14 +15,31 @@ const experiences = [
     company: 'Second Nature',
     location: '',
     date: 'Dec 2023 – Jan 2025',
-    bullets: [],
+    bullets: [
+      'Oversee and audit 150+ business accounts monthly, ensuring data integrity and accuracy through Salesforce.',
+      'Leverage advanced Excel functions and data visualization to identify trends and deliver actionable insights to stakeholders.',
+      'Lead bulk data transformation, uploads, and removals to maintain clean, up-to-date records.',
+      'Serve as a subject matter expert in ERP systems (AppFolio, Propertyware, Buildium, Rent Vine), supporting cross-functional teams.',
+      'Conduct bi-monthly charge detail and invoice audits, implementing deep-dive techniques for financial accuracy.',
+      'Extract, transform, and load data using Excel and SQL queries for robust business intelligence.',
+      'Design concise team reports and onboarding modules to accelerate new hire integration.',
+      'Mentor and train new team members, fostering a culture of continuous improvement.'
+    ],
   },
   {
     title: 'Graduate Research Associate',
     company: 'University of Utah',
     location: '',
     date: 'Jan 2020 – May 2022',
-    bullets: [],
+    bullets: [
+      'Collected, processed, and analyzed scientific data for peer-reviewed publications.',
+      'Utilized advanced Excel functions and statistical tools (Stata, SPSS, SAS, SQL, R Studio) for in-depth quantitative analysis.',
+      'Developed and maintained progress reports, needs assessments, and custom databases.',
+      'Programmed and tested REDCap software for complex data collection and compliance.',
+      'Ensured data integrity and regulatory compliance through rigorous IRB enforcement and process oversight.',
+      'Provided mentorship to research assistants and coordinated participant data collection.',
+      'Synthesized research findings and presented to academic audiences using PowerPoint and pivot tables.'
+    ],
   },
   {
     title: 'Graduate Teaching Assistant',
@@ -84,7 +101,7 @@ const Experiences: React.FC = () => {
                     {idx !== experiences.length - 1 && <div className="timeline-vertical-line" />}
                   </div>
                 </div>
-                <div className="timeline-card">
+                <div className="timeline-card gradient-animated-border">
                   <div className="timeline-card-header">
                     <div>
                       <div className="timeline-job-title">{exp.title}</div>
