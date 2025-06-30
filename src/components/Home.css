@@ -16,10 +16,15 @@
 
 .home h1 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #9d6be7;
   font-family: 'Poppins', sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.typing-animation {
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
 }
 
 .astronaut-image {
