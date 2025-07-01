@@ -2,7 +2,13 @@ import React from 'react';
 import '../GoogleDocViewer.css';
 import { FaTools } from 'react-icons/fa';
 
-const skillCategories = [
+// Define types for the skill categories
+interface SkillCategory {
+  title: string;
+  skills: string[] | string[][];
+}
+
+const skillCategories: SkillCategory[] = [
   {
     title: 'Programming Languages',
     skills: ['TypeScript', 'JavaScript', 'SAS']
@@ -127,8 +133,8 @@ const Skills: React.FC = () => {
                 flexWrap: 'wrap',
                 width: '100%'
               }}>
-                {cat.skills.map((skill, idx) => (
-                  <React.Fragment key={skill}>
+                {(cat.skills as string[]).map((skill: string, skillIdx: number) => (
+                  <React.Fragment key={`${cat.title}-${skillIdx}`}>
                     <span style={{
                       color: '#00bfff',
                       fontSize: '1.05rem',
@@ -139,7 +145,7 @@ const Skills: React.FC = () => {
                       letterSpacing: '0.5px',
                       lineHeight: 1.2
                     }}>{skill}</span>
-                    {idx !== cat.skills.length - 1 && (
+                    {skillIdx !== (cat.skills as string[]).length - 1 && (
                       <div style={{
                         width: '2px',
                         height: '20px',
@@ -159,15 +165,16 @@ const Skills: React.FC = () => {
   );
 };
 
-function renderSkillBox(cat, idx) {
+function renderSkillBox(cat: SkillCategory, idx: number): JSX.Element {
   // For DevOps & Tools and Accessory Software, split into two rows
   const isTwoRow = cat.title === 'DevOps & Tools';
   let firstRow: string[] = [];
   let secondRow: string[] = [];
   if (isTwoRow) {
-    const mid = Math.ceil(cat.skills.length / 2);
-    firstRow = cat.skills.slice(0, mid);
-    secondRow = cat.skills.slice(mid);
+    const skills = cat.skills as string[];
+    const mid = Math.ceil(skills.length / 2);
+    firstRow = skills.slice(0, mid);
+    secondRow = skills.slice(mid);
   }
   // Stretch DevOps & Tools and Methodologies
   const isFullWidth = cat.title === 'DevOps & Tools' || cat.title === 'Methodologies';
@@ -203,7 +210,7 @@ function renderSkillBox(cat, idx) {
             display: 'block'
           }}>{cat.title}</div>
         </div>
-        {cat.skills.map((row, rowIdx) => (
+        {(cat.skills as string[][]).map((row: string[], rowIdx: number) => (
           <div key={rowIdx} style={{
             display: 'flex',
             justifyContent: 'center',
@@ -211,10 +218,10 @@ function renderSkillBox(cat, idx) {
             gap: 0,
             flexWrap: 'wrap',
             width: '100%',
-            marginBottom: rowIdx !== cat.skills.length - 1 ? 4 : 0
+            marginBottom: rowIdx !== (cat.skills as string[][]).length - 1 ? 4 : 0
           }}>
-            {row.map((skill, idx) => (
-              <React.Fragment key={skill}>
+            {row.map((skill: string, skillIdx: number) => (
+              <React.Fragment key={`${cat.title}-${rowIdx}-${skillIdx}`}>
                 <span style={{
                   color: '#00bfff',
                   fontSize: '1.05rem',
@@ -226,7 +233,7 @@ function renderSkillBox(cat, idx) {
                   lineHeight: 1.2
                 }}>{skill}</span>
                 {/* Only show divider if not last in row */}
-                {idx !== row.length - 1 && (
+                {skillIdx !== row.length - 1 && (
                   <div style={{
                     width: '2px',
                     height: '20px',
@@ -274,7 +281,7 @@ function renderSkillBox(cat, idx) {
             display: 'block'
           }}>{cat.title}</div>
         </div>
-        {cat.skills.map((row, rowIdx) => (
+        {(cat.skills as string[][]).map((row: string[], rowIdx: number) => (
           <div key={rowIdx} style={{
             display: 'flex',
             justifyContent: 'center',
@@ -282,10 +289,10 @@ function renderSkillBox(cat, idx) {
             gap: 0,
             flexWrap: 'wrap',
             width: '100%',
-            marginBottom: rowIdx !== cat.skills.length - 1 ? 4 : 0
+            marginBottom: rowIdx !== (cat.skills as string[][]).length - 1 ? 4 : 0
           }}>
-            {row.map((skill, idx) => (
-              <React.Fragment key={skill}>
+            {row.map((skill: string, skillIdx: number) => (
+              <React.Fragment key={`${cat.title}-${rowIdx}-${skillIdx}`}>
                 <span style={{
                   color: '#00bfff',
                   fontSize: '1.05rem',
@@ -297,7 +304,7 @@ function renderSkillBox(cat, idx) {
                   lineHeight: 1.2
                 }}>{skill}</span>
                 {/* Only show divider if not last in row */}
-                {idx !== row.length - 1 && (
+                {skillIdx !== row.length - 1 && (
                   <div style={{
                     width: '2px',
                     height: '20px',
@@ -343,80 +350,39 @@ function renderSkillBox(cat, idx) {
           display: 'block'
         }}>{cat.title}</div>
       </div>
-      {isTwoRow ? (
-        <>
-          {[firstRow, secondRow].map((row, rowIdx) => (
-            <div key={rowIdx} style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              gap: 0, 
-              flexWrap: 'wrap',
-              width: '100%',
-              marginBottom: rowIdx === 0 ? 4 : 0
-            }}>
-              {row.map((skill, idx) => (
-                <React.Fragment key={skill}>
-                  <span style={{
-                    color: '#00bfff',
-                    fontSize: '1.05rem',
-                    fontWeight: 600,
-                    fontFamily: 'Quicksand, Poppins, sans-serif',
-                    padding: '0 10px',
-                    borderRadius: '8px',
-                    letterSpacing: '0.5px',
-                    lineHeight: 1.2
-                  }}>{skill}</span>
-                  {/* Only show divider if not last in row */}
-                  {idx !== row.length - 1 && (
-                    <div style={{
-                      width: '2px',
-                      height: '20px',
-                      background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
-                      borderRadius: '2px',
-                      margin: '0 2px'
-                    }} />
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          ))}
-        </>
-      ) : (
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          gap: 0, 
-          flexWrap: 'wrap',
-          width: '100%'
-        }}>
-          {cat.skills.map((skill, idx) => (
-            <React.Fragment key={skill}>
-              <span style={{
-                color: '#00bfff',
-                fontSize: '1.05rem',
-                fontWeight: 600,
-                fontFamily: 'Quicksand, Poppins, sans-serif',
-                padding: '0 10px',
-                borderRadius: '8px',
-                letterSpacing: '0.5px',
-                lineHeight: 1.2
-              }}>{skill}</span>
-              {/* Only show divider if not last in row */}
-              {idx !== cat.skills.length - 1 && (
-                <div style={{
-                  width: '2px',
-                  height: '20px',
-                  background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
-                  borderRadius: '2px',
-                  margin: '0 2px'
-                }} />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      )}
+      {/* Render skills horizontally */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 0,
+        flexWrap: 'wrap',
+        width: '100%'
+      }}>
+        {(cat.skills as string[]).map((skill: string, skillIdx: number) => (
+          <React.Fragment key={`${cat.title}-${skillIdx}`}>
+            <span style={{
+              color: '#00bfff',
+              fontSize: '1.05rem',
+              fontWeight: 600,
+              fontFamily: 'Quicksand, Poppins, sans-serif',
+              padding: '0 10px',
+              borderRadius: '8px',
+              letterSpacing: '0.5px',
+              lineHeight: 1.2
+            }}>{skill}</span>
+            {skillIdx !== (cat.skills as string[]).length - 1 && (
+              <div style={{
+                width: '2px',
+                height: '20px',
+                background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+                borderRadius: '2px',
+                margin: '0 2px'
+              }} />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 }
