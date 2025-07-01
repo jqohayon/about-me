@@ -298,4 +298,21 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+}
+
+.binary-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 220px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.binary-digit {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  text-shadow: 0 2px 8px #18162a;
+  opacity: 0.92;
+  transition: color 0.3s;
 } 

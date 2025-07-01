@@ -9,11 +9,10 @@ type NavLinkClassNameProps = {
 
 const Navigation: React.FC = () => {
   const handleDownloadCV = () => {
-    // You can replace this with your actual CV file path
-    const cvUrl = '/path-to-your-cv.pdf'; // Update this path
+    const cvUrl = `${import.meta.env.BASE_URL}JacquelineOhayon_Resume.pdf`;
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'YourName_CV.pdf';
+    link.download = 'JacquelineOhayon_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

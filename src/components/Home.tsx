@@ -9,22 +9,27 @@ const Home: React.FC = () => {
 
   return (
     <div className="doc-container">
-      <div className="profile-photo-wrapper">
-        <img 
-          src={profilePhoto} 
-          alt="Jacqueline Ohayon profile" 
-          className="profile-photo"
+      <div style={{ width: 200, height: 200, margin: '2.5rem auto 1.5rem auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '8px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 16px 3px rgba(157,107,231,0.28)' }}>
+        <img
+          src={profilePhoto}
+          alt="Jacqueline Ohayon profile"
+          style={{
+            width: 184,
+            height: 184,
+            objectFit: 'cover',
+            borderRadius: '50%',
+            display: 'block',
+          }}
         />
-        <div className="profile-photo-overlay" />
       </div>
       <h1 style={{
         background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         fontWeight: 700,
-        fontSize: '3.5rem',
-        lineHeight: 1.1,
-        marginBottom: '1.2rem',
+        fontSize: '5rem',
+        lineHeight: 1.08,
+        marginBottom: '1.5rem',
         textAlign: 'center'
       }}>
         Hi, I'm Jacqueline
@@ -42,13 +47,13 @@ const Home: React.FC = () => {
           speed={50}
           repeat={Infinity}
           style={{
-            fontSize: '1.3rem',
+            fontSize: '2.1rem',
             color: '#fff',
             fontFamily: 'Poppins, sans-serif',
             fontWeight: 500,
             textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
             display: 'inline-block',
-            minHeight: '2rem',
+            minHeight: '2.5rem',
             textAlign: 'center'
           }}
         />

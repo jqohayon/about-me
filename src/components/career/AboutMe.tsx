@@ -1,6 +1,9 @@
 import React from 'react';
 import '../GoogleDocViewer.css';
-import { FaUserAstronaut } from 'react-icons/fa';
+import { FaUserAstronaut, FaChessKnight, FaUsers } from 'react-icons/fa';
+import profilePhoto from '../../assets/images/lipfp.jpeg';
+import architectImg from '../../assets/images/architect.png';
+import collabImg from '../../assets/images/collab.png';
 
 const aboutMeFacts = [
   'Based in Salt Lake City, Utah',
@@ -35,23 +38,53 @@ const AboutMe: React.FC = () => {
           fontStyle: 'italic'
         }}>Problem solver and lifelong learner.</p>
       </div>
-      <div className="content-section">
-        <div className="timeline-card" style={{ maxWidth: 600, margin: '0 auto 24px auto', textAlign: 'center' }}>
-          <p style={{
-            color: '#9d6be7',
-            fontSize: '1rem',
-            margin: '0 0 1.5rem 0',
-            maxWidth: 700,
-            textAlign: 'center',
-            lineHeight: 1.6
-          }}>
-            Welcome! I'm a software engineer with a background heavily laden in data. I am after the story it has to tell us. I am passionate about diving into new AI tools and technologies, mentoring others, and bringing a positive, collaborative spirit to every project. Thanks for stopping by—let's connect and create something impactful together!
-          </p>
-        </div>
+      {/* Personality Type & Work Personality Side by Side */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        gap: '64px',
+        maxWidth: 1000,
+        margin: '48px auto 24px auto',
+        width: '100%',
+      }}>
         {/* Personality Type */}
-        <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto 24px auto', textAlign: 'center' }}>
-          <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ flex: 1, minWidth: 320, maxWidth: 420, background: 'none', textAlign: 'center' }}>
+          <div style={{ width: 160, height: 160, margin: '0 auto 18px auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28)' }}>
+            <img
+              src={architectImg}
+              alt="Personality Type - Architect"
+              style={{
+                width: 150,
+                height: 150,
+                objectFit: 'cover',
+                borderRadius: '50%',
+                display: 'block',
+                filter: 'grayscale(100%)',
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              background: 'rgba(157, 107, 231, 0.22)',
+              pointerEvents: 'none',
+              zIndex: 2,
+            }} />
+          </div>
+          <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Personality Type</h4>
+            <div style={{
+              width: '120px',
+              height: '3px',
+              margin: '10px auto 0 auto',
+              borderRadius: '4px',
+              background: 'linear-gradient(90deg, #00bfff 0%, #9370DB 100%)',
+            }} />
           </div>
           <div style={{ color: '#00bfff', fontWeight: 600, fontSize: '1.1rem' }}>
             INTJ / Architect
@@ -71,19 +104,50 @@ const AboutMe: React.FC = () => {
             }}
             className="personality-link"
           >
-            View INTJ-A Profile (16Personalities)
+            View INTJ-A Profile
           </a>
-          <div style={{ color: '#bdbdbd', fontSize: '1rem', marginTop: 6 }}>
+          <div style={{ color: '#bdbdbd', fontSize: '0.95rem', marginTop: 6, maxWidth: 800, marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
             Strategic, analytical, and future-focused. I enjoy solving complex problems and creating efficient systems. This personality type excels in software engineering and data analysis, while also being highly effective in collaborative team environments.
           </div>
         </div>
         {/* Work Personality */}
-        <div className="timeline-card" style={{ maxWidth: 500, margin: '0 auto 24px auto', textAlign: 'center' }}>
-          <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ flex: 1, minWidth: 320, maxWidth: 420, background: 'none', textAlign: 'center' }}>
+          <div style={{ width: 160, height: 160, margin: '0 auto 18px auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28)' }}>
+            <img
+              src={collabImg}
+              alt="Work Personality - Collaboration"
+              style={{
+                width: 150,
+                height: 150,
+                objectFit: 'cover',
+                borderRadius: '50%',
+                display: 'block',
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              background: 'rgba(157, 107, 231, 0.22)',
+              pointerEvents: 'none',
+              zIndex: 2,
+            }} />
+          </div>
+          <div className="timeline-card-header" style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <h4 style={{ fontSize: '1.15rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Work Personality</h4>
+            <div style={{
+              width: '120px',
+              height: '3px',
+              margin: '10px auto 0 auto',
+              borderRadius: '4px',
+              background: 'linear-gradient(90deg, #00bfff 0%, #9370DB 100%)',
+            }} />
           </div>
           <div style={{ color: '#00bfff', fontWeight: 600, fontSize: '1.1rem' }}>
-            Collaborative, detail-oriented, and growth-minded
+            Collaborative · Precise · Driven
           </div>
           <a
             href="https://www.16personalities.com/specialized-tests/results/job-preferences"
@@ -100,35 +164,42 @@ const AboutMe: React.FC = () => {
             }}
             className="work-preferences-link"
           >
-            View Job Preferences Profile
+            View Job Profile
           </a>
-          <div style={{ color: '#bdbdbd', fontSize: '1rem', marginTop: 6 }}>
-            I value clear communication, continuous learning, and delivering high-quality results in every project. My work preferences align with roles that offer intellectual challenges, autonomy, and opportunities to innovate while contributing to meaningful outcomes.
+          <div style={{ color: '#bdbdbd', fontSize: '0.95rem', marginTop: 6, maxWidth: 800, marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
+            I value continuous learning and delivering high-quality results in every project. My work preferences align with roles that offer intellectual challenges, autonomy, and opportunities to innovate while contributing to business outcomes.
           </div>
         </div>
-        {/* Beyond the Code - moved to bottom */}
-        <div className="timeline-card" style={{ maxWidth: 500, margin: '32px auto 0 auto' }}>
-          <div className="timeline-card-header" style={{ marginBottom: 12, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Beyond the Code</h4>
+      </div>
+      {/* Beyond the Code - moved to bottom */}
+      <div style={{ maxWidth: 500, margin: '32px auto 0 auto' }}>
+        <div className="timeline-card-header" style={{ marginBottom: 12, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+          <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Beyond the Code</h4>
+          <div style={{
+            width: '120px',
+            height: '3px',
+            margin: '10px auto 0 auto',
+            borderRadius: '4px',
+            background: 'linear-gradient(90deg, #00bfff 0%, #9370DB 100%)',
+          }} />
+        </div>
+        <div className="beyond-code-piped-multiline" style={{ fontSize: '1.1em', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', width: '100%' }}>
+          <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
+            <span className="beyond-code-item">Violist</span>
+            <span style={{ color: '#9d6be7', opacity: 0.7, fontSize: '1.1em', margin: '0 0.4em' }}>✦</span>
+            <span className="beyond-code-item">Motorcycling</span>
+            <span style={{ color: '#9d6be7', opacity: 0.7, fontSize: '1.1em', margin: '0 0.4em' }}>✦</span>
+            <span className="beyond-code-item">Hiking</span>
           </div>
-          <div className="beyond-code-piped-multiline" style={{ fontSize: '1.1em', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', width: '100%' }}>
-            <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
-              <span className="beyond-code-item">Motorcycling</span>
-              <span className="beyond-code-pipe" />
-              <span className="beyond-code-item">Hiking</span>
-            </div>
-            <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
-              <span className="beyond-code-item">Sci-Fi Bookworm</span>
-              <span className="beyond-code-pipe" />
-              <span className="beyond-code-item">Weightlifter</span>
-              <span className="beyond-code-pipe" />
-              <span className="beyond-code-item">Kiteboarding</span>
-            </div>
-            <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
-              <span className="beyond-code-item">Violist</span>
-              <span className="beyond-code-pipe" />
-              <span className="beyond-code-item">Boardgames</span>
-            </div>
+          <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
+            <span className="beyond-code-item">Boardgames</span>
+            <span style={{ color: '#9d6be7', opacity: 0.7, fontSize: '1.1em', margin: '0 0.4em' }}>✦</span>
+            <span className="beyond-code-item">Kiteboarding</span>
+            <span style={{ color: '#9d6be7', opacity: 0.7, fontSize: '1.1em', margin: '0 0.4em' }}>✦</span>
+            <span className="beyond-code-item">Weightlifting</span>
+          </div>
+          <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+            <span className="beyond-code-item">Sci-Fi Bookworm</span>
           </div>
         </div>
       </div>

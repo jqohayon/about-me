@@ -9,7 +9,7 @@ const skillCategories = [
   },
   {
     title: 'Frameworks',
-    skills: ['NestJS', 'BullMQ', 'React', 'npm', 'Node.js', 'Jest']
+    skills: ['NestJS', 'BullMQ', 'React', 'Node.js', 'Jest']
   },
   {
     title: 'Cloud Platforms',
@@ -66,70 +66,68 @@ const Skills: React.FC = () => {
           fontStyle: 'italic'
         }}>A blend of technical, analytical, and personal growth skills.</p>
       </div>
-      <div className="content-section">
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
-          {skillCategories.map((cat, idx) => (
-            <div
-              className={`timeline-card${idx === 0 ? ' gradient-animated-border' : ''}`}
-              style={{ 
-                flex: '1 1 auto',
-                minWidth: '280px',
-                maxWidth: 'fit-content',
-                margin: '0 8px', 
-                padding: '20px 16px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center'
-              }}
-              key={cat.title}
-            >
-              <div className="timeline-card-header" style={{ marginBottom: 16, width: '100%' }}>
-                <div className="timeline-job-title" style={{
-                  fontWeight: 700,
-                  fontSize: '1.25rem',
-                  letterSpacing: '0.5px',
-                  color: '#fff',
-                  textAlign: 'center',
-                  width: '100%',
-                  margin: '0 auto',
-                  display: 'block'
-                }}>{cat.title}</div>
-              </div>
-              <div style={{ 
-                display: 'flex', 
-                justifyContent: 'center', 
-                alignItems: 'center', 
-                gap: 0, 
-                flexWrap: 'wrap',
-                width: '100%'
-              }}>
-                {cat.skills.map((skill, idx) => (
-                  <React.Fragment key={skill}>
-                    <span style={{
-                      color: '#00bfff',
-                      fontSize: '1.35rem',
-                      fontWeight: 600,
-                      fontFamily: 'Quicksand, Poppins, sans-serif',
-                      padding: '0 18px',
-                      borderRadius: '8px',
-                      letterSpacing: '0.5px',
-                      lineHeight: 1.2
-                    }}>{skill}</span>
-                    {idx !== cat.skills.length - 1 && (
-                      <div style={{
-                        width: '3px',
-                        height: '28px',
-                        background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
-                        borderRadius: '2px',
-                        margin: '0 2px'
-                      }} />
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
+        {skillCategories.map((cat, idx) => (
+          <div
+            className={`timeline-card${idx === 0 ? ' gradient-animated-border' : ''}`}
+            style={{ 
+              flex: '1 1 auto',
+              minWidth: '280px',
+              maxWidth: 'fit-content',
+              margin: '0 8px', 
+              padding: '20px 16px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+            key={cat.title}
+          >
+            <div className="timeline-card-header" style={{ marginBottom: 16, width: '100%' }}>
+              <div className="timeline-job-title" style={{
+                fontWeight: 700,
+                fontSize: '1.25rem',
+                letterSpacing: '0.5px',
+                color: '#fff',
+                textAlign: 'center',
+                width: '100%',
+                margin: '0 auto',
+                display: 'block'
+              }}>{cat.title}</div>
             </div>
-          ))}
-        </div>
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              alignItems: 'center', 
+              gap: 0, 
+              flexWrap: 'wrap',
+              width: '100%'
+            }}>
+              {cat.skills.map((skill, idx) => (
+                <React.Fragment key={skill}>
+                  <span style={{
+                    color: '#00bfff',
+                    fontSize: '1.35rem',
+                    fontWeight: 600,
+                    fontFamily: 'Quicksand, Poppins, sans-serif',
+                    padding: '0 18px',
+                    borderRadius: '8px',
+                    letterSpacing: '0.5px',
+                    lineHeight: 1.2
+                  }}>{skill}</span>
+                  {idx !== cat.skills.length - 1 && (
+                    <div style={{
+                      width: '3px',
+                      height: '28px',
+                      background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+                      borderRadius: '2px',
+                      margin: '0 2px'
+                    }} />
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

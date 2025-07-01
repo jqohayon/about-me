@@ -534,26 +534,8 @@ h4 {
 }
 
 .timeline-vertical-line {
-  display: none;
-}
-
-.timeline-icon {
-  background: linear-gradient(180deg, #00bfff 0%, #9370DB 100%);
-  color: #fff;
-  border-radius: 50%;
-  font-size: 1.7rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-  border: 3px solid #18162a;
-}
-
-.timeline-vertical-line {
   width: 5px;
-  height: 40px;
+  height: 100px;
   background: linear-gradient(180deg, #00bfff 0%, #9370DB 100%);
   margin-top: 0px;
   margin-bottom: 0px;

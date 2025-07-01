@@ -8,7 +8,19 @@ const experiences = [
     company: 'Second Nature',
     location: '',
     date: 'Jan 2025 – Present',
-    bullets: [],
+    bullets: [
+      'Develop and maintain backend services using Node.js and TypeScript in a modular microservices architecture',
+      'Program backend data integrations, including foundational work for RentManager - Propexo integration',
+      'Build and manage PostgreSQL databases, optimizing performance and query complexity',
+      'Integrate AWS services: S3, SES, and Lambda for cloud storage, communications, and serverless processing',
+      'Test RESTful APIs using Postman collections to ensure reliable and consistent endpoint behavior',
+      'Write unit and integration tests in Jest to maintain code quality and reliability',
+      'Deploy containerized services using Docker and Kubernetes in a CI/CD pipeline',
+      'Work in Agile teams, contributing to sprint planning, reviews, and standups',
+      'Manage code versioning and collaboration via Git and GitHub',
+      'Create integrations for multiple PMSs, resulting in an annual revenue increase of $17M',
+      'Use LaunchDarkly for controlled feature rollouts and vendor integrations'
+    ],
   },
   {
     title: 'Data Manager',
@@ -16,14 +28,13 @@ const experiences = [
     location: '',
     date: 'Dec 2023 – Jan 2025',
     bullets: [
-      'Oversee and audit 150+ business accounts monthly, ensuring data integrity and accuracy through Salesforce.',
-      'Leverage advanced Excel functions and data visualization to identify trends and deliver actionable insights to stakeholders.',
-      'Lead bulk data transformation, uploads, and removals to maintain clean, up-to-date records.',
-      'Serve as a subject matter expert in ERP systems (AppFolio, Propertyware, Buildium, Rent Vine), supporting cross-functional teams.',
-      'Conduct bi-monthly charge detail and invoice audits, implementing deep-dive techniques for financial accuracy.',
-      'Extract, transform, and load data using Excel and SQL queries for robust business intelligence.',
-      'Design concise team reports and onboarding modules to accelerate new hire integration.',
-      'Mentor and train new team members, fostering a culture of continuous improvement.'
+      'Developed, maintained, and regularly audited over 150 business accounts monthly through Salesforce',
+      'Used advanced nested Excel functions to instill and improve data integrity and accuracy',
+      'Bulk data transformation, uploading and removal to include enrollments and data nuances',
+      'Subject matter expert in ERP software including AppFolio, Propertyware, Buildium, RentVine.',
+      'Weekly charge detail and monthly invoicing accuracy to include deep auditing techniques',
+      'Data extractions, transformation, loading, through Google Suite, Excel & SQL queries',
+      'Created detailed onboarding and training materials'
     ],
   },
   {
@@ -32,13 +43,13 @@ const experiences = [
     location: '',
     date: 'Jan 2020 – May 2022',
     bullets: [
-      'Collected, processed, and analyzed scientific data for peer-reviewed publications.',
-      'Utilized advanced Excel functions and statistical tools (Stata, SPSS, SAS, SQL, R Studio) for in-depth quantitative analysis.',
-      'Developed and maintained progress reports, needs assessments, and custom databases.',
-      'Programmed and tested REDCap software for complex data collection and compliance.',
-      'Ensured data integrity and regulatory compliance through rigorous IRB enforcement and process oversight.',
-      'Provided mentorship to research assistants and coordinated participant data collection.',
-      'Synthesized research findings and presented to academic audiences using PowerPoint and pivot tables.'
+      'Managed data pipeline collection, processing, and analysis processes',
+      'Advanced statistical analysis using Stata, IBM SPSS, SAS, SQL, and RStudio',
+      'Created and evolved progress reports, needs analysis and collection databases',
+      'Complex programming, testing, and performance of REDCap software',
+      'Synthesized quantitative research after thorough literature review',
+      'Presented published scientific work to peer reviewed boards and educators',
+      'Supervising subordinates to work with study participants'
     ],
   },
   {
@@ -46,21 +57,49 @@ const experiences = [
     company: 'University of Utah',
     location: '',
     date: 'Dec 2019 – May 2022',
-    bullets: [],
+    bullets: [
+      'Successful construction and assessment of student progress through APA papers, assignments, quizzes, and exams for up to 600 students at an R1 institution.',
+      'Enhanced student growth by providing meaningful, thorough, and detailed performance feedback via written, in person, and virtual conference.',
+      "Invested in students' personal growth during office hours, meeting to address questions and host study groups.",
+      'Contributed to seven upper-level courses and instructors.',
+      'Coordinated with instructors to create enriching course content in the following subjects:'
+    ],
+    coursesRow1: [
+      'Advanced Kinesiology',
+      'Advanced Exercise & Physiology',
+    ],
+    coursesRow2: [
+      'Motor Behavior',
+      'CSCS Preparation',
+      'Health & Human Relations',
+    ],
+    coursesRow3: [
+      'Athletic Coaching',
+      'ACSM Certification Preparation'
+    ]
   },
   {
     title: 'Exercise Scientist',
     company: 'National Academy of Sports Medicine',
     location: '',
     date: 'Jan 2015 – Jun 2018',
-    bullets: [],
+    bullets: [
+      'Personalized wellness programming for weight loss and prevention of type II diabetes mellitus.',
+      'Resistance training focused on increasing bone mass and preventing weight bearing injuries.',
+      'Wellness coaching utilizing TTM and SMART goals to improve overall health and wellbeing.'
+    ],
   },
   {
     title: 'Medical Corps',
     company: 'United States Army',
     location: '',
     date: 'Aug 2010 – Aug 2014',
-    bullets: [],
+    bullets: [
+      'Exhibited leadership as a non-commissioned officer by managing a group of five to twenty-five.',
+      'Advanced leadership courses, built to teach professional management and communication skills.',
+      'Successfully taught courses to subordinates pertaining to professionalism and leadership.',
+      'Built and managed programs to reduce failure of physical fitness courses and build comradery over wellness.'
+    ],
   },
 ];
 
@@ -89,41 +128,84 @@ const Experiences: React.FC = () => {
           fontStyle: 'italic'
         }}>A journey through my professional roles.</p>
       </div>
-      <div className="content-section">
-        <div className="timeline-container">
-          <div className="header-divider" style={{ margin: '0 auto 30px auto' }} />
-          <div className="timeline">
-            {experiences.map((exp, idx) => (
-              <div className="timeline-row" key={idx}>
-                <div className="timeline-icon-col">
-                  <div className="timeline-icon-wrapper">
-                    <FaBriefcase className="timeline-icon" />
-                    {idx !== experiences.length - 1 && <div className="timeline-vertical-line" />}
-                  </div>
-                </div>
-                <div className="timeline-card gradient-animated-border">
-                  <div className="timeline-card-header">
-                    <div>
-                      <div className="timeline-job-title">{exp.title}</div>
-                      {exp.company && (
-                        <div className="timeline-company">
-                          {exp.company}
-                        </div>
-                      )}
-                    </div>
-                    <div className="timeline-date">{exp.date}</div>
-                  </div>
-                  {exp.bullets.length > 0 && (
-                    <ul className="timeline-bullets">
-                      {exp.bullets.map((b, i) => (
-                        <li key={i}>{b}</li>
-                      ))}
-                    </ul>
+      <div className="timeline-container">
+        <div className="header-divider" style={{ margin: '0 auto 30px auto' }} />
+        <div className="timeline">
+          {experiences.map((exp, idx) => (
+            <div className="timeline-row" key={idx}>
+              <div className="timeline-icon-col">
+                <div className="timeline-icon-wrapper">
+                  <FaBriefcase className="timeline-icon" />
+                  {idx !== experiences.length - 1 && (
+                    <div
+                      className="timeline-vertical-line"
+                      style={
+                        idx === experiences.length - 2
+                          ? { height: '160px' }
+                          : undefined
+                      }
+                    />
                   )}
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="timeline-card gradient-animated-border">
+                <div className="timeline-card-header">
+                  <div>
+                    <div className="timeline-job-title">{exp.title}</div>
+                    {exp.company && (
+                      <div className="timeline-company">
+                        {exp.company}
+                      </div>
+                    )}
+                  </div>
+                  <div className="timeline-date" style={{ color: '#9370DB', fontWeight: 400, fontSize: '1.15rem', textAlign: 'right', letterSpacing: 0 }}>{exp.date}</div>
+                </div>
+                {exp.bullets.length > 0 && (
+                  <ul className="timeline-bullets">
+                    {exp.bullets.map((b, i) => (
+                      <li key={i}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+                {exp.coursesRow1 && (
+                  <div className="timeline-details-row" style={{ color: '#00bfff', marginTop: 8, fontWeight: 500, fontSize: '0.82rem', justifyContent: 'center', textAlign: 'center', width: '100%', display: 'flex' }}>
+                    <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+                      {exp.coursesRow1.map((course, i) => (
+                        <React.Fragment key={course}>
+                          <span>{course}</span>
+                          {i !== exp.coursesRow1.length - 1 && <span className="gradient-pipe" />}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {exp.coursesRow2 && (
+                  <div className="timeline-details-row" style={{ color: '#00bfff', marginTop: 8, fontWeight: 500, fontSize: '0.82rem', justifyContent: 'center', textAlign: 'center', width: '100%', display: 'flex' }}>
+                    <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+                      {exp.coursesRow2.map((course, i) => (
+                        <React.Fragment key={course}>
+                          <span>{course}</span>
+                          {i !== exp.coursesRow2.length - 1 && <span className="gradient-pipe" />}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {exp.coursesRow3 && (
+                  <div className="timeline-details-row" style={{ color: '#00bfff', marginTop: 8, fontWeight: 500, fontSize: '0.82rem', justifyContent: 'center', textAlign: 'center', width: '100%', display: 'flex' }}>
+                    <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+                      {exp.coursesRow3.map((course, i) => (
+                        <React.Fragment key={course}>
+                          <span>{course}</span>
+                          {i !== exp.coursesRow3.length - 1 && <span className="gradient-pipe" />}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
