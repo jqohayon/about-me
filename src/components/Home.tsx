@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="doc-container">
-      <div style={{ width: 200, height: 200, margin: '2.5rem auto 1.5rem auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '8px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 16px 3px rgba(157,107,231,0.28)' }}>
+      <div style={{ width: 200, height: 200, margin: '2.5rem auto 1.5rem auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 16px 3px rgba(157,107,231,0.28)' }}>
         <img
           src={profilePhoto}
           alt="Jacqueline Ohayon profile"

@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
       }}>
         {/* Personality Type */}
         <div style={{ flex: 1, minWidth: 320, maxWidth: 420, background: 'none', textAlign: 'center' }}>
-          <div style={{ width: 160, height: 160, margin: '0 auto 18px auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28)' }}>
+          <div style={{ width: 160, height: 160, margin: '0 auto 18px auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28)' }}>
             <img
               src={architectImg}
               alt="Personality Type - Architect"
@@ -112,7 +112,7 @@ const AboutMe: React.FC = () => {
         </div>
         {/* Work Personality */}
         <div style={{ flex: 1, minWidth: 320, maxWidth: 420, background: 'none', textAlign: 'center' }}>
-          <div style={{ width: 160, height: 160, margin: '0 auto 18px auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28)' }}>
+          <div style={{ width: 160, height: 160, margin: '0 auto 18px auto', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid #9d6be7', borderRadius: '50%', boxShadow: '0 2px 8px rgba(0,0,0,0.12), 0 0 12px 2px rgba(157,107,231,0.28)' }}>
             <img
               src={collabImg}
               alt="Work Personality - Collaboration"

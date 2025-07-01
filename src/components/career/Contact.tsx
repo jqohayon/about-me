@@ -28,33 +28,9 @@ const Contact: React.FC = () => {
         />
       </div>
       <div className="contact-form-description" style={{ color: '#ffffff', marginBottom: '2rem', textAlign: 'center' }}>
-        Have a project in mind, a question, or just want to connect?
+        Click a link or fill out the form to get in touch!
       </div>
-      <div className="typing-animation" style={{ marginBottom: '1rem' }}>
-        <TypeAnimation
-          sequence={[
-            'Feel free to reach out!',
-            2000,
-            '',
-            500,
-          ]}
-          wrapper="span"
-          speed={50}
-          repeat={Infinity}
-          style={{
-            fontSize: '1.8rem',
-            color: '#9d6be7',
-            fontFamily: 'Poppins, sans-serif',
-            fontWeight: 500,
-            fontStyle: 'italic',
-            textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-            display: 'inline-block',
-            minHeight: '1.5rem',
-            textAlign: 'center'
-          }}
-        />
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0, marginTop: 24, marginBottom: 24 }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0, marginTop: -8, marginBottom: 24 }}>
         <a href="mailto:jqohayon@gmail.com" style={{ color: '#00bfff', fontSize: '1.8rem', textDecoration: 'none', fontWeight: 600, padding: '0 24px' }} title="Gmail">
           <FaEnvelope style={{ marginRight: 8 }} />Gmail
         </a>
@@ -67,20 +43,15 @@ const Contact: React.FC = () => {
           <FaGithub style={{ marginRight: 8 }} />GitHub
         </a>
       </div>
-      <div style={{ 
-        color: '#9d6be7', 
-        fontSize: '1.2rem', 
-        textAlign: 'center', 
-        marginTop: '2rem',
-        marginBottom: '2rem',
-        fontFamily: 'Poppins, sans-serif',
-        fontWeight: 500
-      }}>
-        Or craft a message below
-      </div>
       {/* Contact Form */}
       <form
         className="contact-form"
+        style={{
+          border: '1px solid #9d6be7',
+          boxSizing: 'border-box',
+          padding: '2rem 1.5rem',
+          borderRadius: '16px',
+        }}
         onSubmit={e => { e.preventDefault(); setShowModal(true); }}
       >
         <div className="form-field">

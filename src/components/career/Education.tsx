@@ -52,13 +52,22 @@ const Education: React.FC = () => {
       </div>
       <div className="timeline-container">
         <div className="header-divider" style={{ margin: '0 auto 30px auto' }} />
-        <div className="timeline">
+        <div className="timeline" style={{ position: 'relative' }}>
+          <div style={{
+            position: 'absolute',
+            left: '30px',
+            top: '20px',
+            height: `${(education.length - 1) * 180 + 80}px`,
+            width: '5px',
+            background: 'linear-gradient(180deg, #00bfff 0%, #9370DB 100%)',
+            borderRadius: '2px',
+            zIndex: 0
+          }} />
           {education.map((edu, idx) => (
             <div className="timeline-row" key={idx}>
               <div className="timeline-icon-col">
                 <div className="timeline-icon-wrapper">
-                  <FaGraduationCap className="timeline-icon" />
-                  {idx !== education.length - 1 && <div className="timeline-vertical-line" />}
+                  <FaGraduationCap className="timeline-icon" style={{ zIndex: 2, position: 'relative' }} />
                 </div>
               </div>
               <div className="timeline-card gradient-animated-border">

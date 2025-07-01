@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaBriefcase } from 'react-icons/fa';
 import '../GoogleDocViewer.css';
+import '../../App.css';
 
 const experiences = [
   {
@@ -23,7 +24,7 @@ const experiences = [
     ],
   },
   {
-    title: 'Data Manager',
+    title: 'Data Specialist',
     company: 'Second Nature',
     location: '',
     date: 'Dec 2023 – Jan 2025',
@@ -130,22 +131,15 @@ const Experiences: React.FC = () => {
       </div>
       <div className="timeline-container">
         <div className="header-divider" style={{ margin: '0 auto 30px auto' }} />
-        <div className="timeline">
+        <div className="timeline" style={{ position: 'relative' }}>
+          <style>
+            {`.timeline::before { height: calc(100% - 96px) !important; }`}
+          </style>
           {experiences.map((exp, idx) => (
             <div className="timeline-row" key={idx}>
               <div className="timeline-icon-col">
                 <div className="timeline-icon-wrapper">
-                  <FaBriefcase className="timeline-icon" />
-                  {idx !== experiences.length - 1 && (
-                    <div
-                      className="timeline-vertical-line"
-                      style={
-                        idx === experiences.length - 2
-                          ? { height: '160px' }
-                          : undefined
-                      }
-                    />
-                  )}
+                  <FaBriefcase className="timeline-icon" style={{ zIndex: 2, position: 'relative' }} />
                 </div>
               </div>
               <div className="timeline-card gradient-animated-border">

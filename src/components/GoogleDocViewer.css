@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 30px 30px 80px 30px;
   min-height: 80vh;
   background: 
     linear-gradient(135deg, 
@@ -534,20 +534,35 @@ h4 {
 }
 
 .timeline-vertical-line {
-  width: 5px;
-  height: 100px;
-  background: linear-gradient(180deg, #00bfff 0%, #9370DB 100%);
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-radius: 2px;
-  z-index: 1;
+  display: none;
 }
 
 .timeline-card {
-  background: rgba(20, 17, 35, 0.7);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: 
+    linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(5, 5, 5, 0.95) 50%,
+      rgba(0, 0, 0, 0.95) 100%
+    ),
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    radial-gradient(circle at 50% 50%, 
+      rgba(255, 255, 255, 0.05) 0%, 
+      transparent 60%
+    );
+  background-blend-mode: normal, overlay, screen;
+  border: 1px solid #9d6be7;
   border-radius: 12px;
-  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s;
+}
+
+.timeline-card:hover, .timeline-card.gradient-animated-border:hover {
+  box-shadow: 0 0 16px 2px #9d6be7, 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .gradient-animated-border {

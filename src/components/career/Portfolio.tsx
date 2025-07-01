@@ -33,7 +33,7 @@ const Portfolio: React.FC = () => {
             <h4 style={{ fontSize: '1.3rem', color: '#fff', margin: 0, textAlign: 'center', width: '100%' }}>Coming Soon</h4>
           </div>
           <p style={{ fontStyle: 'italic', color: '#bdbdbd', fontSize: '1.1rem', margin: 0, textAlign: 'center' }}>
-            My portfolio projects will be displayed here soon!
+            <span style={{ color: '#00bfff' }}>My portfolio projects will be displayed here soon!</span>
           </p>
         </div>
       </div>
