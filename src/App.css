@@ -654,6 +654,11 @@ a[href="/feedback"],
   color: #e0dfff;
   font-size: 1rem;
   line-height: 1.6;
+  font-weight: normal;
+}
+
+.timeline-bullets li {
+  font-weight: normal;
 }
 
 @media (max-width: 900px) {

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#6a1b9a" rx="4"/>
+  
+  <!-- Astronaut helmet (main circle) -->
+  <circle cx="16" cy="12" r="9" fill="#e0e0e0" stroke="#ffffff" stroke-width="1"/>
+  
+  <!-- Helmet visor -->
+  <circle cx="16" cy="11" r="6" fill="#1a1a2e" opacity="0.8"/>
+  
+  <!-- Helmet reflection -->
+  <ellipse cx="14" cy="9" rx="2" ry="3" fill="#ffffff" opacity="0.4"/>
+  
+  <!-- Body/suit -->
+  <rect x="12" y="20" width="8" height="10" rx="4" fill="#ffffff"/>
+  
+  <!-- Life support system -->
+  <rect x="13" y="22" width="6" height="2" rx="1" fill="#00bfff"/>
+  
+  <!-- Arms -->
+  <circle cx="10" cy="24" r="2" fill="#ffffff"/>
+  <circle cx="22" cy="24" r="2" fill="#ffffff"/>
+  
+  <!-- Control buttons -->
+  <circle cx="15" cy="26" r="0.5" fill="#00bfff"/>
+  <circle cx="17" cy="26" r="0.5" fill="#ff6b6b"/>
+</svg> 
