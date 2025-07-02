@@ -11,16 +11,18 @@ const experiences = [
     date: 'Jan 2025 – Present',
     bullets: [
       'Develop and maintain backend services using Node.js and TypeScript in a modular microservices architecture',
+      'Monitor backend performance using Datadog; built alerts and dashboards to support uptime and observability.',
+      'Participated in incident response and root cause analysis to improve system reliability',
       'Program backend data integrations, including foundational work for RentManager - Propexo integration',
       'Build and manage PostgreSQL databases, optimizing performance and query complexity',
       'Integrate AWS services: S3, SES, and Lambda for cloud storage, communications, and serverless processing',
-      'Test RESTful APIs using Postman collections to ensure reliable and consistent endpoint behavior',
+      'Test RESTful APIs using Postman collections to ensure reliable endpoint behavior',
       'Write unit and integration tests in Jest to maintain code quality and reliability',
       'Deploy containerized services using Docker and Kubernetes in a CI/CD pipeline',
       'Work in Agile teams, contributing to sprint planning, reviews, and standups',
       'Manage code versioning and collaboration via Git and GitHub',
       'Create integrations for multiple PMSs, resulting in an annual revenue increase of $17M',
-      'Use LaunchDarkly for controlled feature rollouts and vendor integrations'
+      'Maintain LaunchDarkly for controlled feature rollouts and vendor integrations'
     ],
   },
   {
@@ -29,7 +31,7 @@ const experiences = [
     location: '',
     date: 'Dec 2023 – Jan 2025',
     bullets: [
-      'Developed, maintained, and regularly audited over 150 business accounts monthly through Salesforce',
+      'Developed, maintained, and monthly audit of 150 accounts through Salesforce',
       'Used advanced nested Excel functions to instill and improve data integrity and accuracy',
       'Bulk data transformation, uploading and removal to include enrollments and data nuances',
       'Subject matter expert in ERP software including AppFolio, Propertyware, Buildium, RentVine.',
