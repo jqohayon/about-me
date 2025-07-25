@@ -22,21 +22,37 @@ const AboutMe: React.FC = () => {
         WebkitTextFillColor: 'transparent',
         fontWeight: 700
       }}>About Me</h2>
-      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <FaUserAstronaut 
-          style={{ 
-            fontSize: '2rem',
-            color: '#6a1b9a',
-            transition: 'all 0.3s ease'
+      
+      {/* Chameleon Image */}
+      <div style={{ textAlign: 'center', margin: '-35px 0 -15px 0' }}>
+        <img 
+          src={`${import.meta.env.BASE_URL}Cham.png`}
+          alt="Cyberpunk Chameleon"
+          style={{
+            width: '200px',
+            height: 'auto',
+            borderRadius: '12px'
           }}
         />
-        <p style={{
-          color: '#ffffff',
-          fontSize: '1.2rem',
-          marginTop: '8px',
-          marginBottom: '0',
-          fontStyle: 'italic'
-        }}>Problem solver and lifelong learner.</p>
+      </div>
+      
+      <div style={{
+        color: '#ffffff',
+        fontSize: '1.1rem',
+        marginTop: '5px',
+        marginBottom: '30px',
+        maxWidth: '700px',
+        margin: '5px auto 30px auto',
+        lineHeight: '1.6',
+        textAlign: 'center',
+        padding: '0 20px'
+      }}>
+        <p style={{ margin: '0 0 20px 0', fontSize: '1.1rem' }}>
+          I'm a chameleon by design. I've worn a lot of hats: backend dev, data wrangler, systems thinker, researcher. I adapt quickly, not only to blend in, but to build bridges between tools, people, and moments of existential panic. I believe being "weird on purpose" is a strength. It's how I stay curious, honest, and human, even inside the code.
+        </p>
+        <p style={{ margin: '0', fontStyle: 'italic', color: '#9d6be7', fontWeight: '500', fontSize: '1.1rem' }}>
+          Adapt like a chameleon. Weird on purpose.
+        </p>
       </div>
       {/* Personality Type & Work Personality Side by Side */}
       <div style={{
@@ -183,6 +199,18 @@ const AboutMe: React.FC = () => {
             background: 'linear-gradient(90deg, #00bfff 0%, #9370DB 100%)',
           }} />
         </div>
+        
+        {/* Intro text */}
+        <div style={{ 
+          textAlign: 'center', 
+          marginBottom: '16px', 
+          fontStyle: 'italic', 
+          color: '#9d6be7', 
+          fontSize: '1rem' 
+        }}>
+          When I'm not sucked into the virtual void, you can find me...
+        </div>
+        
         <div className="beyond-code-piped-multiline" style={{ fontSize: '1.1em', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', width: '100%' }}>
           <div className="beyond-code-row" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
             <span className="beyond-code-item">Violist</span>
